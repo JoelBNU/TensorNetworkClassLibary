@@ -135,7 +135,7 @@ def print_dict(a, keys=None, welcome='', style_sep=': ', color='white', end='\n'
                 express += n.capitalize() + style_sep + str(a[n])
                 if n is not keys[-1]:
                     express += end
-    print(express, color)
+    cprint(express, color)
     return express
 
 
@@ -184,7 +184,7 @@ def input_and_check_type(right_type, name, print_result=True, dict_name='para'):
         except NameError or ValueError or SyntaxError:
             cprint('The input is illegal, please input again ...', 'magenta')
     if print_result:
-        print('You have set ' + colored(dict_name + '[' + name + '] = ' + str(value), 'cyan'))
+        print('You have set ' + colored(dict_name + '[\'' + name + '\'] = ' + str(value), 'cyan'))
     return value
 
 
